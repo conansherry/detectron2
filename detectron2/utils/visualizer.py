@@ -40,6 +40,7 @@ class ColorMode(Enum):
         SEGMENTATION: Let instances of the same category have similar colors, and overlay them with
             high opacity. This provides more attention on the quality of segmentation.
         IMAGE_BW: same as IMAGE, but convert all areas without masks to gray-scale.
+            Only available for drawing per-instance mask predictions.
     """
 
     IMAGE = 0
@@ -351,6 +352,7 @@ class Visualizer:
             alpha = 0.5
 
         if self._instance_mode == ColorMode.IMAGE_BW:
+            assert predictions.has("pred_masks"), "ColorMode.IMAGE_BW requires segmentations"
             self.output.img = self._create_grayscale_image(
                 (predictions.pred_masks.any(dim=0) > 0).numpy()
             )
@@ -480,7 +482,10 @@ class Visualizer:
             names = self.metadata.get("thing_classes", None)
             if names:
                 labels = [names[i] for i in labels]
-            labels = [i + ("|crowd" if a.get("iscrowd", 0) else "") for i, a in zip(labels, annos)]
+            labels = [
+                "{}".format(i) + ("|crowd" if a.get("iscrowd", 0) else "")
+                for i, a in zip(labels, annos)
+            ]
             self.overlay_instances(labels=labels, boxes=boxes, masks=masks, keypoints=keypts)
 
         sem_seg = dic.get("sem_seg", None)
@@ -681,20 +686,23 @@ class Visualizer:
             output (VisImage): image object with visualizations.
         """
         visible = {}
+        keypoint_names = self.metadata.get("keypoint_names")
         for idx, keypoint in enumerate(keypoints):
             # draw keypoint
             x, y, prob = keypoint
             if prob > _KEYPOINT_THRESHOLD:
                 self.draw_circle((x, y), color=_RED)
-                keypoint_name = self.metadata.keypoint_names[idx]
-                visible[keypoint_name] = (x, y)
+                if keypoint_names:
+                    keypoint_name = keypoint_names[idx]
+                    visible[keypoint_name] = (x, y)
 
-        for kp0, kp1, color in self.metadata.keypoint_connection_rules:
-            if kp0 in visible and kp1 in visible:
-                x0, y0 = visible[kp0]
-                x1, y1 = visible[kp1]
-                color = tuple(x / 255.0 for x in color)
-                self.draw_line([x0, x1], [y0, y1], color=color)
+        if self.metadata.get("keypoint_connection_rules"):
+            for kp0, kp1, color in self.metadata.keypoint_connection_rules:
+                if kp0 in visible and kp1 in visible:
+                    x0, y0 = visible[kp0]
+                    x1, y1 = visible[kp1]
+                    color = tuple(x / 255.0 for x in color)
+                    self.draw_line([x0, x1], [y0, y1], color=color)
 
         # draw lines from nose to mid-shoulder and mid-shoulder to mid-hip
         # Note that this strategy is specific to person keypoints.
