@@ -42,6 +42,10 @@ python setup.py build develop
 ```
 Note: you may need to rebuild detectron2 after reinstalling a different build of PyTorch.
 
+<div align="center">
+  <img src="docs/windows_build.png"/>
+</div>
+
 <img src=".github/Detectron2-Logo-Horz.svg" width="300" >
 
 Detectron2 is Facebook AI Research's next generation software system
