@@ -34,7 +34,7 @@ conda activate {your env}
 
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
 
-git clone git@github.com:facebookresearch/detectron2.git
+git clone https://github.com/conansherry/detectron2
 
 cd detectron2
 
