@@ -16,7 +16,7 @@ file1:
   {C:\Miniconda3\envs\py36}\Lib\site-packages\torch\include\torch\csrc\jit\argument_spec.h(190)
     static constexpr size_t DEPTH_LIMIT = 128;
       change to -->
-    static constt size_t DEPTH_LIMIT = 128;
+    static const size_t DEPTH_LIMIT = 128;
 file2: 
   {your evn path}\Lib\site-packages\torch\include\pybind11\cast.h
   example:
