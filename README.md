@@ -1,5 +1,5 @@
 ### Requirements
-- Python >= 3.6
+- Python >= 3.6(Conda)
 - PyTorch 1.3
 - [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
 	You can install them together at [pytorch.org](https://pytorch.org) to make sure of this.
