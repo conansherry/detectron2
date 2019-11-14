@@ -23,10 +23,10 @@ corresponds to information about one image.
 
 The dict may contain the following keys:
 
-* "image": `Tensor` in (C, H, W) format.
+* "image": `Tensor` in (C, H, W) format. The meaning of channels are defined by `cfg.INPUT.FORMAT`.
 * "instances": an `Instances` object, with the following fields:
 	+ "gt_boxes": `Boxes` object storing N boxes, one for each instance.
-	+ "gt_classes": `Tensor`, a vector of N labels, in range [0, num_categories).
+	+ "gt_classes": `Tensor` of long type, a vector of N labels, in range [0, num_categories).
 	+ "gt_masks": a `PolygonMasks` object storing N masks, one for each instance.
 	+ "gt_keypoints": a `Keypoints` object storing N keypoint sets, one for each instance.
 * "proposals": an `Instances` object used in Fast R-CNN style models, with the following fields:
