@@ -6,6 +6,7 @@ import os
 import datetime
 import json
 import numpy as np
+import imagesize
 
 from PIL import Image
 
@@ -262,12 +263,11 @@ def load_sem_seg(gt_root, image_root, gt_ext="png", image_ext="jpg"):
 
     dataset_dicts = []
     for (img_path, gt_path) in zip(input_files, gt_files):
+        local_path = PathManager.get_local_path(gt_path)
+        w, h = imagesize.get(local_path)
         record = {}
         record["file_name"] = img_path
         record["sem_seg_file_name"] = gt_path
-        with PathManager.open(gt_path, "rb") as f:
-            img = Image.open(f)
-            w, h = img.size
         record["height"] = h
         record["width"] = w
         dataset_dicts.append(record)
@@ -303,9 +303,9 @@ def convert_to_coco_dict(dataset_name):
     coco_images = []
     coco_annotations = []
 
-    for image_dict in dataset_dicts:
+    for image_id, image_dict in enumerate(dataset_dicts):
         coco_image = {
-            "id": image_dict["image_id"],
+            "id": image_dict.get("image_id", image_id),
             "width": image_dict["width"],
             "height": image_dict["height"],
             "file_name": image_dict["file_name"],
@@ -331,10 +331,11 @@ def convert_to_coco_dict(dataset_name):
                 area = polygons.area()[0].item()
             else:
                 # Computing areas using bounding boxes
-                area = Boxes([bbox]).area()[0].item()
+                bbox_xy = BoxMode.convert(bbox, BoxMode.XYWH_ABS, BoxMode.XYXY_ABS)
+                area = Boxes([bbox_xy]).area()[0].item()
 
             if "keypoints" in annotation:
-                keypoints = annotation["keypoints"] # list[int]
+                keypoints = annotation["keypoints"]  # list[int]
                 for idx, v in enumerate(keypoints):
                     if idx % 3 != 2:
                         # COCO's segmentation coordinates are floating points in [0, H or W],
@@ -351,8 +352,8 @@ def convert_to_coco_dict(dataset_name):
             #   linking annotations to images
             #   "id" field must start with 1
             coco_annotation["id"] = len(coco_annotations) + 1
-            coco_annotation["image_id"] = image_dict["image_id"]
-            coco_annotation["bbox"] = bbox
+            coco_annotation["image_id"] = coco_image["id"]
+            coco_annotation["bbox"] = [round(float(x), 3) for x in bbox]
             coco_annotation["area"] = area
             coco_annotation["category_id"] = annotation["category_id"]
             coco_annotation["iscrowd"] = annotation.get("iscrowd", 0)

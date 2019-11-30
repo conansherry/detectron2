@@ -46,7 +46,11 @@ def read_image(file_name, format=None):
     with PathManager.open(file_name, "rb") as f:
         image = Image.open(f)
 
-        image = ImageOps.exif_transpose(image)
+        # capture and ignore this bug: https://github.com/python-pillow/Pillow/issues/3973
+        try:
+            image = ImageOps.exif_transpose(image)
+        except Exception:
+            pass
 
         if format is not None:
             # PIL only supports RGB, so convert to RGB and flip channels over below
@@ -73,7 +77,13 @@ def check_image_size(dataset_dict, image):
         expected_wh = (dataset_dict["width"], dataset_dict["height"])
         if not image_wh == expected_wh:
             raise SizeMismatchError(
-                "mismatch (W,H), got {}, expect {}".format(image_wh, expected_wh)
+                "Mismatched (W,H){}, got {}, expect {}".format(
+                    " for image " + dataset_dict["file_name"]
+                    if "file_name" in dataset_dict
+                    else "",
+                    image_wh,
+                    expected_wh,
+                )
             )
 
     # To ensure bbox always remap to original image size
@@ -81,6 +91,7 @@ def check_image_size(dataset_dict, image):
         dataset_dict["width"] = image.shape[1]
     if "height" not in dataset_dict:
         dataset_dict["height"] = image.shape[0]
+
 
 def transform_proposals(dataset_dict, image_shape, transforms, min_box_side_len, proposal_topk):
     """

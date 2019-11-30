@@ -20,18 +20,20 @@ For more advanced tutorials, refer to our [documentation](https://detectron2.rea
 ```
 python demo/demo.py --config-file configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml \
   --input input1.jpg input2.jpg \
+	[--other-options]
   --opts MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl
 ```
 The configs are made for training, therefore we need to specify `MODEL.WEIGHTS` to a model from model zoo for evaluation.
 This command will run the inference and show visualizations in an OpenCV window.
 
+For details of the command line arguments, see `demo.py -h`. Some common ones are:
 * To run __on your webcam__, replace `--input files` with `--webcam`.
 * To run __on a video__, replace `--input files` with `--video-input video.mp4`.
 * To run __on cpu__, add `MODEL.DEVICE cpu` after `--opts`.
 * To save outputs to a directory (for images) or a file (for webcam or video), use `--output`.
 
 
-### Train a Standard Model
+### Use Detectron2 in Command Line
 
 We provide a script in "tools/train_net.py", that is made to train
 all the configs provided in detectron2.
@@ -46,7 +48,7 @@ python tools/train_net.py --num-gpus 8 \
 	--config-file configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml
 ```
 
-The configs are made for 8-GPU training. To train on 1 GPU, use:
+The configs are made for 8-GPU training. To train on 1 GPU, change the batch size with:
 ```
 python tools/train_net.py \
 	--config-file configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml \
