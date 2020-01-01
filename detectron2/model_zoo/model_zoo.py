@@ -74,8 +74,9 @@ class ModelZooUrls(object):
 
     @classmethod
     def get(cls, config_path):
+        name = config_path.replace(".yaml", "")
         if config_path in cls.CONFIG_PATH_TO_URL_SUFFIX:
-            name = config_path.replace(".yaml", "")
+            # name = config_path.replace(".yaml", "")
             return cls.S3_PREFIX + name + "/" + cls.CONFIG_PATH_TO_URL_SUFFIX[config_path]
         raise RuntimeError("{} not available in Model Zoo!".format(name))
 
