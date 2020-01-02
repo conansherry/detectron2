@@ -1,0 +1,2228 @@
+{
+          "info": {
+                    "description": "busTrain",
+                    "url": "none",
+                    "version": "1.0",
+                    "year": 2019,
+                    "contributor": "Yuval and Lior",
+                    "date_created": "2019/12/12"
+          },
+          "licenses": [
+                    {
+                              "url": "none",
+                              "id": 1,
+                              "name": "none"
+                    }
+          ],
+          "images": [
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1013.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 1,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 98289.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            1217.0,
+                                                            1690.0,
+                                                            489.0,
+                                                            201.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 106400.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            1774.0,
+                                                            1619.0,
+                                                            475.0,
+                                                            224.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 104880.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            2313.0,
+                                                            1566.0,
+                                                            460.0,
+                                                            228.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 2
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 114807.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            1284.0,
+                                                            1832.0,
+                                                            497.0,
+                                                            231.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 3
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 110808.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            1879.0,
+                                                            1798.0,
+                                                            486.0,
+                                                            228.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 4
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 108300.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 1,
+                                                  "bbox": [
+                                                            2429.0,
+                                                            1742.0,
+                                                            475.0,
+                                                            228.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 5
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1015.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 2,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 1053452.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 2,
+                                                  "bbox": [
+                                                            641.0,
+                                                            1342.0,
+                                                            1181.0,
+                                                            892.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 824670.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 2,
+                                                  "bbox": [
+                                                            2053.0,
+                                                            1022.0,
+                                                            1122.0,
+                                                            735.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1016.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 3,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 682882.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 3,
+                                                  "bbox": [
+                                                            1067.0,
+                                                            1843.0,
+                                                            1114.0,
+                                                            613.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 572781.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 3,
+                                                  "bbox": [
+                                                            1954.0,
+                                                            1278.0,
+                                                            1021.0,
+                                                            561.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 612140.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 3,
+                                                  "bbox": [
+                                                            2392.0,
+                                                            717.0,
+                                                            964.0,
+                                                            635.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1017.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 4,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 332958.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 4,
+                                                  "bbox": [
+                                                            1834.0,
+                                                            698.0,
+                                                            789.0,
+                                                            422.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1021.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 5,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 503958.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 5,
+                                                  "bbox": [
+                                                            1991.0,
+                                                            755.0,
+                                                            923.0,
+                                                            546.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1023.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 6,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 354820.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 6,
+                                                  "bbox": [
+                                                            1909.0,
+                                                            1166.0,
+                                                            785.0,
+                                                            452.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1025.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 7,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 888920.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 7,
+                                                  "bbox": [
+                                                            985.0,
+                                                            1570.0,
+                                                            1252.0,
+                                                            710.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1029.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 8,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 931643.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 8,
+                                                  "bbox": [
+                                                            129.0,
+                                                            1648.0,
+                                                            1271.0,
+                                                            733.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 935748.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 8,
+                                                  "bbox": [
+                                                            1456.0,
+                                                            1076.0,
+                                                            1122.0,
+                                                            834.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 850632.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 8,
+                                                  "bbox": [
+                                                            2552.0,
+                                                            826.0,
+                                                            1058.0,
+                                                            804.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1032.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 9,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 459061.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 9,
+                                                  "bbox": [
+                                                            144.0,
+                                                            1200.0,
+                                                            983.0,
+                                                            467.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 417696.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 9,
+                                                  "bbox": [
+                                                            2339.0,
+                                                            1125.0,
+                                                            916.0,
+                                                            456.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1037.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 10,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 944567.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 10,
+                                                  "bbox": [
+                                                            1210.0,
+                                                            1712.0,
+                                                            1469.0,
+                                                            643.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1038.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 11,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 1396184.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 11,
+                                                  "bbox": [
+                                                            1210.0,
+                                                            1764.0,
+                                                            1754.0,
+                                                            796.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1040.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 12,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 532896.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 12,
+                                                  "bbox": [
+                                                            462.0,
+                                                            1813.0,
+                                                            976.0,
+                                                            546.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 419822.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 12,
+                                                  "bbox": [
+                                                            1445.0,
+                                                            1791.0,
+                                                            871.0,
+                                                            482.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 363455.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 12,
+                                                  "bbox": [
+                                                            2305.0,
+                                                            1779.0,
+                                                            785.0,
+                                                            463.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1042.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 13,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 510552.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 13,
+                                                  "bbox": [
+                                                            2021.0,
+                                                            1682.0,
+                                                            1013.0,
+                                                            504.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1044.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 14,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 494758.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 14,
+                                                  "bbox": [
+                                                            1460.0,
+                                                            1200.0,
+                                                            946.0,
+                                                            523.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1048.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 15,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 208810.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 15,
+                                                  "bbox": [
+                                                            443.0,
+                                                            1230.0,
+                                                            665.0,
+                                                            314.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 196175.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 15,
+                                                  "bbox": [
+                                                            1498.0,
+                                                            1181.0,
+                                                            665.0,
+                                                            295.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 217930.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 15,
+                                                  "bbox": [
+                                                            2511.0,
+                                                            1099.0,
+                                                            703.0,
+                                                            310.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1049.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 16,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 306132.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 16,
+                                                  "bbox": [
+                                                            480.0,
+                                                            998.0,
+                                                            789.0,
+                                                            388.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 293040.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 16,
+                                                  "bbox": [
+                                                            1718.0,
+                                                            1192.0,
+                                                            740.0,
+                                                            396.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 244982.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 16,
+                                                  "bbox": [
+                                                            2758.0,
+                                                            1364.0,
+                                                            706.0,
+                                                            347.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1050.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 17,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 294264.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 17,
+                                                  "bbox": [
+                                                            454.0,
+                                                            766.0,
+                                                            804.0,
+                                                            366.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 289872.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 17,
+                                                  "bbox": [
+                                                            1767.0,
+                                                            807.0,
+                                                            792.0,
+                                                            366.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1053.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 18,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 519096.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 18,
+                                                  "bbox": [
+                                                            925.0,
+                                                            1536.0,
+                                                            1006.0,
+                                                            516.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 529799.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 18,
+                                                  "bbox": [
+                                                            2010.0,
+                                                            1510.0,
+                                                            1013.0,
+                                                            523.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1056.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 19,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 779888.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 19,
+                                                  "bbox": [
+                                                            469.0,
+                                                            957.0,
+                                                            1234.0,
+                                                            632.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 806978.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 19,
+                                                  "bbox": [
+                                                            1700.0,
+                                                            953.0,
+                                                            1219.0,
+                                                            662.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1059.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 20,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 778718.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 20,
+                                                  "bbox": [
+                                                            1221.0,
+                                                            994.0,
+                                                            1103.0,
+                                                            706.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1061.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 21,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 1077912.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 21,
+                                                  "bbox": [
+                                                            488.0,
+                                                            1648.0,
+                                                            1361.0,
+                                                            792.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 723008.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 21,
+                                                  "bbox": [
+                                                            1191.0,
+                                                            1203.0,
+                                                            1144.0,
+                                                            632.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1064.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 22,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 420909.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 22,
+                                                  "bbox": [
+                                                            2399.0,
+                                                            358.0,
+                                                            811.0,
+                                                            519.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 536733.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 22,
+                                                  "bbox": [
+                                                            585.0,
+                                                            740.0,
+                                                            927.0,
+                                                            579.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1065.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 23,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 248166.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 23,
+                                                  "bbox": [
+                                                            705.0,
+                                                            1031.0,
+                                                            811.0,
+                                                            306.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 234396.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 23,
+                                                  "bbox": [
+                                                            2193.0,
+                                                            908.0,
+                                                            766.0,
+                                                            306.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1066.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 24,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 238376.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 24,
+                                                  "bbox": [
+                                                            1019.0,
+                                                            1121.0,
+                                                            718.0,
+                                                            332.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 223095.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 24,
+                                                  "bbox": [
+                                                            2025.0,
+                                                            1121.0,
+                                                            695.0,
+                                                            321.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1068.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 25,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 659316.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 25,
+                                                  "bbox": [
+                                                            750.0,
+                                                            343.0,
+                                                            1316.0,
+                                                            501.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 504339.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 25,
+                                                  "bbox": [
+                                                            2459.0,
+                                                            1533.0,
+                                                            957.0,
+                                                            527.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1070.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 26,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 599324.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 26,
+                                                  "bbox": [
+                                                            1617.0,
+                                                            1413.0,
+                                                            1028.0,
+                                                            583.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 459194.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 26,
+                                                  "bbox": [
+                                                            1528.0,
+                                                            990.0,
+                                                            878.0,
+                                                            523.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1072.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 27,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 502884.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 27,
+                                                  "bbox": [
+                                                            746.0,
+                                                            1211.0,
+                                                            916.0,
+                                                            549.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 516912.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 27,
+                                                  "bbox": [
+                                                            1905.0,
+                                                            1465.0,
+                                                            968.0,
+                                                            534.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1074.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 28,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 1679288.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 28,
+                                                  "bbox": [
+                                                            1127.0,
+                                                            1319.0,
+                                                            1742.0,
+                                                            964.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1077.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 29,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 688200.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 29,
+                                                  "bbox": [
+                                                            308.0,
+                                                            1282.0,
+                                                            1110.0,
+                                                            620.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 706992.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 29,
+                                                  "bbox": [
+                                                            1700.0,
+                                                            1342.0,
+                                                            1133.0,
+                                                            624.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1081.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 30,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 282744.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 30,
+                                                  "bbox": [
+                                                            1475.0,
+                                                            1282.0,
+                                                            714.0,
+                                                            396.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1082.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 31,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 511038.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 31,
+                                                  "bbox": [
+                                                            996.0,
+                                                            579.0,
+                                                            957.0,
+                                                            534.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 512732.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 31,
+                                                  "bbox": [
+                                                            2118.0,
+                                                            601.0,
+                                                            946.0,
+                                                            542.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1086.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 32,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 202188.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 32,
+                                                  "bbox": [
+                                                            716.0,
+                                                            975.0,
+                                                            609.0,
+                                                            332.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 202272.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 32,
+                                                  "bbox": [
+                                                            1471.0,
+                                                            971.0,
+                                                            602.0,
+                                                            336.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 204336.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 32,
+                                                  "bbox": [
+                                                            2175.0,
+                                                            1005.0,
+                                                            594.0,
+                                                            344.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 2
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 216118.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 32,
+                                                  "bbox": [
+                                                            2878.0,
+                                                            990.0,
+                                                            602.0,
+                                                            359.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 3
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1088.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 33,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 332958.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 33,
+                                                  "bbox": [
+                                                            1232.0,
+                                                            440.0,
+                                                            789.0,
+                                                            422.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 241980.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 33,
+                                                  "bbox": [
+                                                            1326.0,
+                                                            1525.0,
+                                                            654.0,
+                                                            370.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1090.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 34,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 249010.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 34,
+                                                  "bbox": [
+                                                            1920.0,
+                                                            784.0,
+                                                            673.0,
+                                                            370.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1092.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 35,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 466446.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 35,
+                                                  "bbox": [
+                                                            424.0,
+                                                            1293.0,
+                                                            867.0,
+                                                            538.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 459240.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 35,
+                                                  "bbox": [
+                                                            1636.0,
+                                                            1521.0,
+                                                            890.0,
+                                                            516.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 378504.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 35,
+                                                  "bbox": [
+                                                            2481.0,
+                                                            1028.0,
+                                                            751.0,
+                                                            504.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1094.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 36,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 577753.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 36,
+                                                  "bbox": [
+                                                            1378.0,
+                                                            1035.0,
+                                                            991.0,
+                                                            583.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1097.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 37,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 733425.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 37,
+                                                  "bbox": [
+                                                            1326.0,
+                                                            642.0,
+                                                            1155.0,
+                                                            635.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1099.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 38,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 628296.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 38,
+                                                  "bbox": [
+                                                            1112.0,
+                                                            556.0,
+                                                            1114.0,
+                                                            564.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1101.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 39,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 461664.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 39,
+                                                  "bbox": [
+                                                            1015.0,
+                                                            1072.0,
+                                                            916.0,
+                                                            504.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1103.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 40,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 248069.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 40,
+                                                  "bbox": [
+                                                            1475.0,
+                                                            541.0,
+                                                            691.0,
+                                                            359.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 438084.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 40,
+                                                  "bbox": [
+                                                            1168.0,
+                                                            1880.0,
+                                                            849.0,
+                                                            516.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1104.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 41,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 225036.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 41,
+                                                  "bbox": [
+                                                            1715.0,
+                                                            493.0,
+                                                            684.0,
+                                                            329.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 329724.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 41,
+                                                  "bbox": [
+                                                            1632.0,
+                                                            1783.0,
+                                                            774.0,
+                                                            426.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1105.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 42,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 990560.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 42,
+                                                  "bbox": [
+                                                            1090.0,
+                                                            1016.0,
+                                                            1312.0,
+                                                            755.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1106.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 43,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 720720.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 43,
+                                                  "bbox": [
+                                                            1202.0,
+                                                            1076.0,
+                                                            1155.0,
+                                                            624.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1109.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 44,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 765700.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 44,
+                                                  "bbox": [
+                                                            1053.0,
+                                                            878.0,
+                                                            1178.0,
+                                                            650.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1110.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 45,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 757986.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 45,
+                                                  "bbox": [
+                                                            686.0,
+                                                            743.0,
+                                                            1159.0,
+                                                            654.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 754882.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 45,
+                                                  "bbox": [
+                                                            1920.0,
+                                                            792.0,
+                                                            1174.0,
+                                                            643.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1111.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 46,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 589824.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 46,
+                                                  "bbox": [
+                                                            1890.0,
+                                                            867.0,
+                                                            1024.0,
+                                                            576.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 608069.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 46,
+                                                  "bbox": [
+                                                            671.0,
+                                                            874.0,
+                                                            1043.0,
+                                                            583.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 1
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1114.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 47,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 504952.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 47,
+                                                  "bbox": [
+                                                            1535.0,
+                                                            1177.0,
+                                                            994.0,
+                                                            508.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1116.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 48,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 521954.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 48,
+                                                  "bbox": [
+                                                            1539.0,
+                                                            1458.0,
+                                                            998.0,
+                                                            523.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1120.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 49,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 934744.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 49,
+                                                  "bbox": [
+                                                            1236.0,
+                                                            1274.0,
+                                                            1324.0,
+                                                            706.0
+                                                  ],
+                                                  "category_id": 3,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1122.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 50,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 546878.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 50,
+                                                  "bbox": [
+                                                            1479.0,
+                                                            949.0,
+                                                            1009.0,
+                                                            542.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1125.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 51,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 271410.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 51,
+                                                  "bbox": [
+                                                            978.0,
+                                                            930.0,
+                                                            654.0,
+                                                            415.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 392830.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 51,
+                                                  "bbox": [
+                                                            1198.0,
+                                                            1394.0,
+                                                            815.0,
+                                                            482.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 364320.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 51,
+                                                  "bbox": [
+                                                            2406.0,
+                                                            1252.0,
+                                                            792.0,
+                                                            460.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1129.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 52,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 396792.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 52,
+                                                  "bbox": [
+                                                            1408.0,
+                                                            1772.0,
+                                                            792.0,
+                                                            501.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1130.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 53,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 355605.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 53,
+                                                  "bbox": [
+                                                            1516.0,
+                                                            1708.0,
+                                                            755.0,
+                                                            471.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1132.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 54,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 122250.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 54,
+                                                  "bbox": [
+                                                            2751.0,
+                                                            1005.0,
+                                                            489.0,
+                                                            250.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 467039.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 54,
+                                                  "bbox": [
+                                                            2283.0,
+                                                            1278.0,
+                                                            893.0,
+                                                            523.0
+                                                  ],
+                                                  "category_id": 4,
+                                                  "id": 1
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 1040440.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 54,
+                                                  "bbox": [
+                                                            174.0,
+                                                            1663.0,
+                                                            1406.0,
+                                                            740.0
+                                                  ],
+                                                  "category_id": 5,
+                                                  "id": 2
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1133.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 55,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 958740.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 55,
+                                                  "bbox": [
+                                                            1352.0,
+                                                            1192.0,
+                                                            1140.0,
+                                                            841.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1135.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 56,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 217195.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 56,
+                                                  "bbox": [
+                                                            1801.0,
+                                                            1233.0,
+                                                            605.0,
+                                                            359.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1137.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 57,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 405822.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 57,
+                                                  "bbox": [
+                                                            1879.0,
+                                                            1136.0,
+                                                            849.0,
+                                                            478.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1140.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 58,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 224076.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 58,
+                                                  "bbox": [
+                                                            1722.0,
+                                                            594.0,
+                                                            789.0,
+                                                            284.0
+                                                  ],
+                                                  "category_id": 6,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1141.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 59,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 215556.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 59,
+                                                  "bbox": [
+                                                            1793.0,
+                                                            665.0,
+                                                            781.0,
+                                                            276.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        }
+                              ]
+                    },
+                    {
+                              "license": 1,
+                              "file_name": "DSCF1142.jpg",
+                              "coco_url": "none",
+                              "height": 2736,
+                              "width": 3648,
+                              "date_captured": "none",
+                              "flickr_url": "none",
+                              "id": 60,
+                              "annotations": [
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 343768.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 60,
+                                                  "bbox": [
+                                                            914.0,
+                                                            1200.0,
+                                                            886.0,
+                                                            388.0
+                                                  ],
+                                                  "category_id": 2,
+                                                  "id": 0
+                                        },
+                                        {
+                                                  "segmentation": [],
+                                                  "area": 340664.0,
+                                                  "iscrowd": 0,
+                                                  "image_id": 60,
+                                                  "bbox": [
+                                                            2010.0,
+                                                            1211.0,
+                                                            878.0,
+                                                            388.0
+                                                  ],
+                                                  "category_id": 1,
+                                                  "id": 1
+                                        }
+                              ]
+                    }
+          ],
+          "categories": [
+                    {
+                              "supercategory": "bus",
+                              "id": 1,
+                              "name": "green"
+                    },
+                    {
+                              "supercategory": "bus",
+                              "id": 2,
+                              "name": "yellow"
+                    },
+                    {
+                              "supercategory": "bus",
+                              "id": 3,
+                              "name": "white"
+                    },
+                    {
+                              "supercategory": "bus",
+                              "id": 4,
+                              "name": "gray"
+                    },
+                    {
+                              "supercategory": "bus",
+                              "id": 5,
+                              "name": "blue"
+                    },
+                    {
+                              "supercategory": "bus",
+                              "id": 6,
+                              "name": "red"
+                    }
+          ],
+          "segment_info": []
+}
