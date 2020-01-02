@@ -23,6 +23,7 @@ from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 from detectron2.model_zoo.model_zoo import get_config_file
+from detectron2.utils.visualizer import ColorMode
 
 import os
 import json
@@ -70,7 +71,7 @@ def unwrap_tags(line, is_xyxy):
         print('ERROR')
         return
     line = line[line.find(':') + 1:-1].split()[-1]
-    print(line)
+    # print(line)
     pre_boxes = line.split('],[')
     boxes = np.zeros((len(pre_boxes), 5))
     for k in range(len(pre_boxes)):
@@ -179,7 +180,7 @@ def get_bus_dicts(img_dir):
                 "bbox": tags[j],
                 "bbox_mode": BoxMode.XYWH_ABS,
                 # "segmentation": [],
-                "category_id": int(tag_class[j]),
+                "category_id": int(tag_class[j]), #TODO return tu tag_class[j]
                 "iscrowd": 0
             }
             objs.append(obj)
@@ -191,7 +192,7 @@ def verification(metadata, type):
     if type == 'balloon':
         dataset_dicts = get_balloon_dicts(os.path.join("..", "..", "balloon_dataset", "balloon", "train"))
     else:
-        dataset_dicts = get_bus_dicts(os.path.join("..", "Project", "Original Pictures"))
+        dataset_dicts = get_bus_dicts(os.path.join("..", "data", "originalData", "pictures"))
 
     l = 0
     for d in random.sample(dataset_dicts, 10):
@@ -208,23 +209,48 @@ def train():
     cfg.merge_from_file(get_config_file("COCO-Detection/fast_rcnn_R_50_FPN_1x.yaml"))
     cfg.DATASETS.TRAIN = ("bus_train",)
     cfg.DATASETS.TEST = ()
-    cfg.DATALOADER.NUM_WORKERS = 2
-    #cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137257794/model_final_b275ba.pkl"  # Let training initialize from model zoo
-    cfg.MODEL.WEIGHTS = "C:/Users/yuval/Documents/Yuval/TAU/2019-2020/Computer Vision/Project/Test Weights/model_final_b275ba.pkl"  # Let training initialize from model zoo
-    #cfg.DATASETS.PROPOSAL_FILES_TRAIN = "C:/Users/yuval/Documents/Yuval/TAU/2019-2020/Computer Vision/Project/Test Weights/model_final_b275ba.pkl"
+    cfg.DATALOADER.NUM_WORKERS = 1
+
+    cfg.MODEL.PROPOSAL_GENERATOR.NAME = "RPN"
+
+    # cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137257794/model_final_b275ba.pkl"  # Let training initialize from model zoo
+    cfg.MODEL.WEIGHTS = "model_final_b275ba.pkl"  # Let training initialize from model zoo
+
     cfg.MODEL.LOAD_PROPOSALS = False
+    # cfg.DATASETS.PROPOSAL_FILES_TRAIN = "coco_2017_train_box_proposals_21bc3a.pkl"
+
     # cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137849600/model_final_f10217.pklmodel_final_b275ba.pkl"  # Let training initialize from model zoo
-    cfg.SOLVER.IMS_PER_BATCH = 2
+    cfg.SOLVER.IMS_PER_BATCH = 1
     cfg.SOLVER.BASE_LR = 0.00025
-    cfg.SOLVER.MAX_ITER = 300    # 300 iterations seems good enough, but you can certainly train longer
+    cfg.SOLVER.MAX_ITER = 30    # 300 iterations seems good enough, but you can certainly train longer
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # faster, and good enough for this toy dataset
-    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6  # only has one class (ballon)
+    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6  # only has one class (balloon)
 
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
     trainer = DefaultTrainer(cfg)
     trainer.resume_or_load(resume=True)
     trainer.train()
 
+def eval(metadata):
+    cfg = get_cfg()
+    cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7  # TODO change back to 0.7 set the testing threshold for this model
+    cfg.DATASETS.TEST = ("bus_train",)
+    predictor = DefaultPredictor(cfg)
+
+    dataset_dicts = get_bus_dicts(os.path.join("..", "data", "originalData", "pictures"))
+    k=0
+    for d in random.sample(dataset_dicts, 10):
+        im = cv2.imread(d["file_name"])
+        outputs = predictor(im)
+        v = Visualizer(im[:, :, ::-1],
+                       metadata=metadata,
+                       scale=0.8,
+                       )
+        v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+        # cv2_imshow(v.get_image()[:, :, ::-1])
+        cv2.imwrite('b' + str(k) + '.jpg', (v.get_image()[:, :, ::-1]))
+        k+=1
 
 
 def main():
@@ -238,13 +264,18 @@ def main():
 
 
     for d in ["train"]:
-        DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "Project", "Original Pictures")))
-        MetadataCatalog.get("bus_" + d).set(thing_classes=["0", "1", "2", "3", "4", "5", "6"])
+        DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "data", "originalData", "pictures")))
+        # MetadataCatalog.get("bus_" + d).set(thing_classes=['bla', 'a', 'b', 'c', 'd', 'e', 'f'])
+        MetadataCatalog.get("bus_" + d).set(thing_classes=['0', '1', '2', '3', '4', '5', '6'])
     buses_metadata = MetadataCatalog.get("bus_train")
 
     verification(buses_metadata, 'bus')
 
     train()
+    print('finished training')
+    print('started training')
+    eval(buses_metadata)
+    print('finished evaluation')
 
 
 if __name__ == '__main__':
