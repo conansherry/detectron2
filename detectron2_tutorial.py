@@ -180,7 +180,7 @@ def get_bus_dicts(img_dir):
                 "bbox": tags[j],
                 "bbox_mode": BoxMode.XYWH_ABS,
                 # "segmentation": [],
-                "category_id": int(tag_class[j]), #TODO return tu tag_class[j]
+                "category_id": int(tag_class[j]-1), #TODO return tu tag_class[j]
                 "iscrowd": 0
             }
             objs.append(obj)
@@ -206,41 +206,40 @@ def verification(metadata, type):
 
 def train():
     cfg = get_cfg()
-    cfg.merge_from_file(get_config_file("COCO-Detection/fast_rcnn_R_50_FPN_1x.yaml"))
+    cfg.merge_from_file(get_config_file("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"))
     cfg.DATASETS.TRAIN = ("bus_train",)
-    cfg.DATASETS.TEST = ()
+    cfg.DATASETS.TEST = ("bus_train",) #TODO change back
     cfg.DATALOADER.NUM_WORKERS = 1
 
-    cfg.MODEL.PROPOSAL_GENERATOR.NAME = "RPN"
 
+    cfg.MODEL.WEIGHTS = "model_final_280758.pkl"  # Let training initialize from model zoo
     # cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137257794/model_final_b275ba.pkl"  # Let training initialize from model zoo
-    cfg.MODEL.WEIGHTS = "model_final_b275ba.pkl"  # Let training initialize from model zoo
+    # cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137849600/model_final_f10217.pklmodel_final_b275ba.pkl"  # Let training initialize from model zoo
 
     cfg.MODEL.LOAD_PROPOSALS = False
     # cfg.DATASETS.PROPOSAL_FILES_TRAIN = "coco_2017_train_box_proposals_21bc3a.pkl"
 
-    # cfg.MODEL.WEIGHTS = "detectron2://COCO-Detection/fast_rcnn_R_50_FPN_1x/137849600/model_final_f10217.pklmodel_final_b275ba.pkl"  # Let training initialize from model zoo
     cfg.SOLVER.IMS_PER_BATCH = 1
-    cfg.SOLVER.BASE_LR = 0.00025
-    cfg.SOLVER.MAX_ITER = 30    # 300 iterations seems good enough, but you can certainly train longer
-    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # faster, and good enough for this toy dataset
-    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6  # only has one class (balloon)
+    cfg.SOLVER.BASE_LR = 0.1
+    cfg.SOLVER.MAX_ITER = 1    # 300 iterations seems good enough, but you can certainly train longer
+    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512   # faster, and good enough for this toy dataset
+    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6
 
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
     trainer = DefaultTrainer(cfg)
-    trainer.resume_or_load(resume=True)
+    trainer.resume_or_load(resume=False)
     trainer.train()
 
 def eval(metadata):
     cfg = get_cfg()
     cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
-    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7  # TODO change back to 0.7 set the testing threshold for this model
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.01  # TODO change back to 0.7 set the testing threshold for this model
     cfg.DATASETS.TEST = ("bus_train",)
     predictor = DefaultPredictor(cfg)
 
-    dataset_dicts = get_bus_dicts(os.path.join("..", "data", "originalData", "pictures"))
+    dataset_dicts = get_bus_dicts(os.path.join("..", "data", "toyData", "pictures"))
     k=0
-    for d in random.sample(dataset_dicts, 10):
+    for d in random.sample(dataset_dicts, 3):
         im = cv2.imread(d["file_name"])
         outputs = predictor(im)
         v = Visualizer(im[:, :, ::-1],
@@ -249,7 +248,7 @@ def eval(metadata):
                        )
         v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
         # cv2_imshow(v.get_image()[:, :, ::-1])
-        cv2.imwrite('b' + str(k) + '.jpg', (v.get_image()[:, :, ::-1]))
+        cv2.imwrite('c' + str(k) + '.jpg', (v.get_image()[:, :, ::-1]))
         k+=1
 
 
@@ -264,16 +263,17 @@ def main():
 
 
     for d in ["train"]:
-        DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "data", "originalData", "pictures")))
+        DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "data", "toyData", "pictures")))
         # MetadataCatalog.get("bus_" + d).set(thing_classes=['bla', 'a', 'b', 'c', 'd', 'e', 'f'])
-        MetadataCatalog.get("bus_" + d).set(thing_classes=['0', '1', '2', '3', '4', '5', '6'])
+        MetadataCatalog.get("bus_" + d).set(thing_classes=['0', '1', '2', '3', '4', '5'])
     buses_metadata = MetadataCatalog.get("bus_train")
 
     verification(buses_metadata, 'bus')
 
+    print('started training')
     train()
     print('finished training')
-    print('started training')
+    print('starting evaluation')
     eval(buses_metadata)
     print('finished evaluation')
 
