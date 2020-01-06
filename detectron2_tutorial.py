@@ -266,6 +266,8 @@ def main():
         DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "data", "toyData", "pictures")))
         # MetadataCatalog.get("bus_" + d).set(thing_classes=['bla', 'a', 'b', 'c', 'd', 'e', 'f'])
         MetadataCatalog.get("bus_" + d).set(thing_classes=['0', '1', '2', '3', '4', '5'])
+        # MetadataCatalog.get("bus_" + d).set(thing_classes=[     '0',        '1',        '2',        '3',    '4',    '5'])
+        # MetadataCatalog.get("bus_" + d).set(thing_classes=[   'green',    'yellow',   'white',    'gray', 'blue', 'red'])
     buses_metadata = MetadataCatalog.get("bus_train")
 
     verification(buses_metadata, 'bus')
