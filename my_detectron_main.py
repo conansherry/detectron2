@@ -51,6 +51,9 @@ def verification(metadata, pictures_dir, annotation_lines):
 
 
 def train_and_eval(split_rate):
+
+    max_iter = 400
+    lr = 0.01
     pictures_dir = os.path.join("..", "data", "originalData", "pictures")
     annotations_path = os.path.join(pictures_dir, 'originalAnnotationsTrain.txt')
 
@@ -68,7 +71,7 @@ def train_and_eval(split_rate):
     net_name = 'faster_rcnn_R_50_FPN_3x'
 
     print('started training')
-    train(net_name, True)
+    train(net_name, True, max_iter, lr)
     print('finished training')
 
 

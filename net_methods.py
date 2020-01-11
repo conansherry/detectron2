@@ -1,7 +1,8 @@
 from my_imports import *
 from my_detectron_main import *
+from my_detectron_main import get_bus_dicts
 
-def train(net_name, download_weights):
+def train(net_name, download_weights, max_iter, lr):
     cfg = get_cfg()
     cfg.merge_from_file(get_config_file(NETS[net_name]['config_file']))
     cfg.DATASETS.TRAIN = ("bus_train",)
@@ -15,9 +16,9 @@ def train(net_name, download_weights):
 
 
     cfg.SOLVER.IMS_PER_BATCH = 1
-    cfg.SOLVER.BASE_LR = 0.01
-    cfg.SOLVER.MAX_ITER = 300
-    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512
+    cfg.SOLVER.BASE_LR = lr
+    cfg.SOLVER.MAX_ITER = max_iter
+    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6
 
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
