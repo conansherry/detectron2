@@ -15,7 +15,7 @@ def train(net_name, download_weights, max_iter, lr):
         cfg.MODEL.WEIGHTS = NETS[net_name]['local_coco_weights']
 
 
-    cfg.SOLVER.IMS_PER_BATCH = 1
+    cfg.SOLVER.IMS_PER_BATCH = 2
     cfg.SOLVER.BASE_LR = lr
     cfg.SOLVER.MAX_ITER = max_iter
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
@@ -32,7 +32,7 @@ def eval(metadata, net_name, pictures_dir, split_lines_eval):
     cfg.merge_from_file(get_config_file(NETS[net_name]['config_file']))
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6
-
+    cfg.SOLVER.IMS_PER_BATCH = 2
     cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6
     cfg.DATASETS.TEST = ("bus_val",)
