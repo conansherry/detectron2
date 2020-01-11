@@ -148,7 +148,8 @@ class _RenameConverter:
     A converter that handles simple rename.
     """
 
-    RENAME: List[Tuple[str, str]] = []  # list of tuples of (old name, new name)
+    # RENAME: List[Tuple[str, str]] = []  # list of tuples of (old name, new name)
+    RENAME = []  #
 
     @classmethod
     def upgrade(cls, cfg: CN) -> None:
