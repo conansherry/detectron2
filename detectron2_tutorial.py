@@ -8,8 +8,6 @@ from detectron2.config import get_cfg
 from detectron2.data import DatasetCatalog, MetadataCatalog
 import torch, torchvision
 
-setup_logger()
-
 # import some common libraries
 import numpy as np
 import cv2
@@ -24,6 +22,7 @@ from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 from detectron2.model_zoo.model_zoo import get_config_file
 from detectron2.utils.visualizer import ColorMode
+setup_logger()
 
 import os
 import json
@@ -31,8 +30,9 @@ from detectron2.structures import BoxMode
 import itertools
 import re
 
-IMAGE_HEIGHT = 2736
-IMAGE_WIDTH = 3648
+
+# IMAGE_HEIGHT = 2736
+# IMAGE_WIDTH = 3648
 
 def find_line_index(lines, name):
     '''
@@ -150,28 +150,15 @@ def get_bus_dicts(img_dir):
 
         tags, tag_class = unwrap_tags(original_lines[line_idx], is_xyxy=False)
 
-        # for i in range(len(tag_class)):
-        #     annotation = {
-        #         "segmentation": [],
-        #         "area": tags[i][2] * tags[i][3],
-        #         "iscrowd": 0,
-        #         "image_id": image_id,
-        #         "bbox": list(tags[i]),
-        #         "category_id": int(tag_class[i]),
-        #         "id": i
-        #     }
-        #     image_annotations_list += [annotation]
-
         record = {}
 
         full_filename = os.path.join(img_dir, image_filename)
-        # height, width = cv2.imread(full_filename).shape[:2]
+        image_height, image_width = cv2.imread(full_filename).shape[:2]
 
         record["file_name"] = full_filename
         record["image_id"] = image_id
-        record["height"] = IMAGE_HEIGHT
-        record["width"] = IMAGE_WIDTH
-
+        record["height"] = image_height
+        record["width"] = image_width
 
         objs = []
         for j in range(len(tag_class)):
@@ -180,7 +167,7 @@ def get_bus_dicts(img_dir):
                 "bbox": tags[j],
                 "bbox_mode": BoxMode.XYWH_ABS,
                 # "segmentation": [],
-                "category_id": int(tag_class[j]-1), #TODO return tu tag_class[j]
+                "category_id": int(tag_class[j]-1),
                 "iscrowd": 0
             }
             objs.append(obj)
@@ -188,11 +175,9 @@ def get_bus_dicts(img_dir):
         dataset_dicts.append(record)
     return dataset_dicts
 
-def verification(metadata, type):
-    if type == 'balloon':
-        dataset_dicts = get_balloon_dicts(os.path.join("..", "..", "balloon_dataset", "balloon", "train"))
-    else:
-        dataset_dicts = get_bus_dicts(os.path.join("..", "data", "originalData", "pictures"))
+def verification(metadata):
+
+    dataset_dicts = get_bus_dicts(os.path.join("..", "data", "originalData", "pictures"))
 
     l = 0
     for d in random.sample(dataset_dicts, 10):
@@ -253,30 +238,19 @@ def eval(metadata):
 
 
 def main():
-    # for balloon
-    # for d in ["train", "val"]:
-    #     DatasetCatalog.register("balloon_" + d, lambda d=d: get_balloon_dicts("../../balloon_dataset/balloon/" + d))
-    #     MetadataCatalog.get("balloon_" + d).set(thing_classes=["balloon"])
-    # balloon_metadata = MetadataCatalog.get("balloon_train")
-
-    # verification(balloon_metadata, 'balloon')
-
 
     for d in ["train"]:
         DatasetCatalog.register("bus_" + d, lambda d=d: get_bus_dicts(os.path.join("..", "data", "toyData", "pictures")))
-        # MetadataCatalog.get("bus_" + d).set(thing_classes=['bla', 'a', 'b', 'c', 'd', 'e', 'f'])
         MetadataCatalog.get("bus_" + d).set(thing_classes=['0', '1', '2', '3', '4', '5'])
-        # MetadataCatalog.get("bus_" + d).set(thing_classes=[     '0',        '1',        '2',        '3',    '4',    '5'])
-        # MetadataCatalog.get("bus_" + d).set(thing_classes=[   'green',    'yellow',   'white',    'gray', 'blue', 'red'])
     buses_metadata = MetadataCatalog.get("bus_train")
 
     verification(buses_metadata, 'bus')
 
     print('started training')
-    train()
+    # train()
     print('finished training')
     print('starting evaluation')
-    eval(buses_metadata)
+    # eval(buses_metadata)
     print('finished evaluation')
 
 
