@@ -1,15 +1,18 @@
 from my_imports import *
 from my_detectron_main import *
 
-def train(net_name):
+def train(net_name, download_weights):
     cfg = get_cfg()
     cfg.merge_from_file(get_config_file(NETS[net_name]['config_file']))
     cfg.DATASETS.TRAIN = ("bus_train",)
     cfg.DATASETS.TEST = ("bus_val",)
     cfg.DATALOADER.NUM_WORKERS = 1
 
+    if download_weights:
+        cfg.MODEL.WEIGHTS = NETS[net_name]['download_coco_weights']
+    else:
+        cfg.MODEL.WEIGHTS = NETS[net_name]['local_coco_weights']
 
-    cfg.MODEL.WEIGHTS = NETS[net_name]['coco_weights']
 
     cfg.SOLVER.IMS_PER_BATCH = 1
     cfg.SOLVER.BASE_LR = 0.01

@@ -68,7 +68,7 @@ def train_and_eval(split_rate):
     net_name = 'faster_rcnn_R_50_FPN_3x'
 
     print('started training')
-    train(net_name)
+    train(net_name, True)
     print('finished training')
 
 
