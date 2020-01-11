@@ -1,6 +1,5 @@
 from my_imports import *
 from my_detectron_main import *
-from my_detectron_main import get_bus_dicts
 
 def train(net_name, download_weights, max_iter, lr):
     cfg = get_cfg()
