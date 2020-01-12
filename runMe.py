@@ -3,7 +3,6 @@
 import os
 import json
 import random
-import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
@@ -179,9 +178,10 @@ def run(myAnnFileName, bus_dir):
 
     # Adding additional non-default configurations
     cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
-    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5  # set the testing threshold for this model
-    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128  # faster, and good enough for this toy dataset (default: 512)
-    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6  # only has one class (ballon)
+
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.8
+    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
+    cfg.MODEL.ROI_HEADS.NUM_CLASSES = 6
     cfg.DATASETS.TEST = ("bus_val",)
     # cfg.TEST.AUG.ENABLED = True
 
@@ -200,8 +200,8 @@ def run(myAnnFileName, bus_dir):
 
     return
 
-if __name__ == '__main__':
-    ann_file = os.path.join('test_output.txt')
-    bus_dir = os.path.join("data","val")
-    # bus_dir = os.path.join("..","toyData","val")
-    run(ann_file, bus_dir)
+# if __name__ == '__main__':
+#     ann_file = os.path.join('test_output.txt')
+#     bus_dir = os.path.join("data","val")
+#     # bus_dir = os.path.join("..","toyData","val")
+#     run(ann_file, bus_dir)
