@@ -27,7 +27,7 @@ class GeneralizedRCNN(nn.Module):
     def __init__(self, cfg):
         super().__init__()
 
-        self.device = torch.device(cfg.MODEL.DEVICE)
+        self.device = torch.device(cfg.MODEL.DEVICE) if torch.cuda.is_available() else 'cpu'
         # self.device = torch.device('cpu')
         self.backbone = build_backbone(cfg)
         self.proposal_generator = build_proposal_generator(cfg, self.backbone.output_shape())

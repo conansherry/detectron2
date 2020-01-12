@@ -177,7 +177,7 @@ def run(myAnnFileName, bus_dir):
     cfg.SOLVER.STEPS = (210000, 250000)
 
     # Adding additional non-default configurations
-    cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
+    cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "weights_f1_1.000000_lr_0.008000_iter_450_ther_0.800000.pth")
 
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.8
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
