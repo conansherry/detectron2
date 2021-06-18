@@ -4,7 +4,15 @@
 - [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
 	You can install them together at [pytorch.org](https://pytorch.org) to make sure of this.
 - OpenCV, needed by demo and visualization
-- [fvcore](https://github.com/facebookresearch/fvcore/): `pip install git+https://github.com/facebookresearch/fvcore`
+- [fvcore](https://github.com/facebookresearch/fvcore/): 
+```
+git clone https://github.com/facebookresearch/fvcore.git
+cd fvcore
+git checkout c0ba80ac330ac08dd27ef1ce2e69c455d6f48e56
+cd ..
+pip install -e fvcore
+```
+
 - pycocotools: `pip install cython; pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI`
 - VS2019(no test in older version)/CUDA10.1(no test in older version)
 
